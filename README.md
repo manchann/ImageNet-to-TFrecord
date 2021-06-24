@@ -8,7 +8,19 @@ The Image-Net images should be in unique synset label name folders, in the follo
 
 n01694178  n01843065  n02037110  n02096051  n02107683   ..... n04111531  n04273569  n04456115  n04597913  n07802026
 
+## Difference with Origin
+
+bytes(str,utf-8) -> bytes(str)
+ 
+import tensorflow.compat.v1 as tf
+import tensorflow.contrib.eager as tfe
+
+tfe.enable_eager_execution()
+
+Please run in python2.7
+
 ## Usage
+
 
 For this example the folders mentioned above are inside a folder called "val". To convert the images into TF-Record format just run the script below *(Tested with Python2)* :
 
@@ -55,3 +67,6 @@ python eval_image_classifier.py --alsologtostderr --checkpoint_path=/pre-trained
 ###### Top-1 Accuracy = 0.75202	| Top-1 Recall = 0.92194
 
 More information about slim here : https://github.com/tensorflow/models/tree/master/research/slim
+
+
+
